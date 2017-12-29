@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17F0311A1FF61631005BAD72 /* TicketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030891FF61631005BAD72 /* TicketManager.swift */; };
+		17F0311B1FF61631005BAD72 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0308A1FF61631005BAD72 /* UserManager.swift */; };
+		17F0311C1FF61631005BAD72 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0308C1FF61631005BAD72 /* DayOfWeek.swift */; };
+		17F0311D1FF61631005BAD72 /* InfoUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0308D1FF61631005BAD72 /* InfoUserView.swift */; };
+		17F0311E1FF61631005BAD72 /* TicketObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030921FF61631005BAD72 /* TicketObject.swift */; };
+		17F0311F1FF61631005BAD72 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030931FF61631005BAD72 /* UserObject.swift */; };
+		17F031201FF61631005BAD72 /* EventObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030941FF61631005BAD72 /* EventObject.swift */; };
+		17F031211FF61631005BAD72 /* AddressObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030951FF61631005BAD72 /* AddressObject.swift */; };
+		17F031221FF61631005BAD72 /* TicketOrderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030961FF61631005BAD72 /* TicketOrderObject.swift */; };
+		17F031231FF61631005BAD72 /* TypeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030971FF61631005BAD72 /* TypeObject.swift */; };
+		17F031241FF61631005BAD72 /* OrderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030981FF61631005BAD72 /* OrderObject.swift */; };
+		17F031251FF61631005BAD72 /* Extensions+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0309A1FF61631005BAD72 /* Extensions+UINavigationController.swift */; };
+		17F031261FF61631005BAD72 /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0309B1FF61631005BAD72 /* Extensions+String.swift */; };
+		17F031271FF61631005BAD72 /* Extensions+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0309C1FF61631005BAD72 /* Extensions+UIImageView.swift */; };
+		17F031281FF61631005BAD72 /* Extensions+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0309D1FF61631005BAD72 /* Extensions+Double.swift */; };
+		17F031291FF61631005BAD72 /* Extensions+UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0309E1FF61631005BAD72 /* Extensions+UIActivityIndicatorView.swift */; };
+		17F0312A1FF61631005BAD72 /* Extensions+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0309F1FF61631005BAD72 /* Extensions+Int.swift */; };
+		17F0312B1FF61631005BAD72 /* Extensions+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030A01FF61631005BAD72 /* Extensions+Date.swift */; };
+		17F0312C1FF61631005BAD72 /* Extensions+NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030A11FF61631005BAD72 /* Extensions+NSError.swift */; };
+		17F0312D1FF61631005BAD72 /* Extensions+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030A21FF61631005BAD72 /* Extensions+Data.swift */; };
+		17F0312E1FF61631005BAD72 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030A31FF61631005BAD72 /* Extensions+UIViewController.swift */; };
+		17F0312F1FF61631005BAD72 /* Extensions+HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030A41FF61631005BAD72 /* Extensions+HTTPURLResponse.swift */; };
+		17F031301FF61631005BAD72 /* Extensions+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030A51FF61631005BAD72 /* Extensions+UIImage.swift */; };
+		17F031591FF61631005BAD72 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F01FF61631005BAD72 /* ForgotPasswordVC.swift */; };
+		17F0315A1FF61631005BAD72 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F21FF61631005BAD72 /* SignUpVC.swift */; };
+		17F0315C1FF61631005BAD72 /* DialogNetworkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F61FF61631005BAD72 /* DialogNetworkVC.swift */; };
+		17F0315D1FF61631005BAD72 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F81FF61631005BAD72 /* LaunchVC.swift */; };
+		17F0315E1FF61631005BAD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F91FF61631005BAD72 /* AppDelegate.swift */; };
+		17F0315F1FF61631005BAD72 /* EventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FB1FF61631005BAD72 /* EventProtocols.swift */; };
+		17F031601FF61631005BAD72 /* ActionTicketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FC1FF61631005BAD72 /* ActionTicketDelegate.swift */; };
+		17F031611FF61631005BAD72 /* OrderEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FD1FF61631005BAD72 /* OrderEventDelegate.swift */; };
+		17F031621FF61631005BAD72 /* InteractiveEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FE1FF61631005BAD72 /* InteractiveEventProtocol.swift */; };
+		17F031631FF61631005BAD72 /* UpdateProfilesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FF1FF61631005BAD72 /* UpdateProfilesProtocol.swift */; };
+		17F031641FF61631005BAD72 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031011FF61631005BAD72 /* Helpers.swift */; };
+		17F031651FF61631005BAD72 /* TicketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031031FF61631005BAD72 /* TicketServices.swift */; };
+		17F031661FF61631005BAD72 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031041FF61631005BAD72 /* UserServices.swift */; };
+		17F031671FF61631005BAD72 /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031051FF61631005BAD72 /* EventServices.swift */; };
+		17F031681FF61631005BAD72 /* SocketIOServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031061FF61631005BAD72 /* SocketIOServices.swift */; };
+		17F031691FF61631005BAD72 /* OrderServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031071FF61631005BAD72 /* OrderServices.swift */; };
+		17F0316A1FF61631005BAD72 /* TypeEventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031081FF61631005BAD72 /* TypeEventServices.swift */; };
+		17F0316B1FF61631005BAD72 /* GoogleMapsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031091FF61631005BAD72 /* GoogleMapsServices.swift */; };
+		17F031741FF61631005BAD72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17F031151FF61631005BAD72 /* Images.xcassets */; };
+		17F031751FF61631005BAD72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17F031181FF61631005BAD72 /* GoogleService-Info.plist */; };
+		17F031761FF61631005BAD72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17F031191FF61631005BAD72 /* Info.plist */; };
+		17F031781FF6164D005BAD72 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F031771FF6164D005BAD72 /* Launch Screen.storyboard */; };
+		17F0317A1FF61676005BAD72 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F031791FF61676005BAD72 /* Launch.storyboard */; };
+		17F0317E1FF61731005BAD72 /* MyEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0317C1FF61731005BAD72 /* MyEventsVC.swift */; };
+		17F031811FF617EF005BAD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F031801FF617EF005BAD72 /* Main.storyboard */; };
+		17F031851FF6185B005BAD72 /* MyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031831FF6185B005BAD72 /* MyEventCell.swift */; };
+		17F031861FF6185C005BAD72 /* MyEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F031841FF6185B005BAD72 /* MyEventCell.xib */; };
+		17F0318A1FF618C7005BAD72 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F031891FF618C7005BAD72 /* SignUpVC.xib */; };
+		17F031991FF61A73005BAD72 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031911FF61A73005BAD72 /* Ubuntu-Medium.ttf */; };
+		17F0319A1FF61A73005BAD72 /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031921FF61A73005BAD72 /* Ubuntu-LightItalic.ttf */; };
+		17F0319B1FF61A73005BAD72 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031931FF61A73005BAD72 /* Ubuntu-Regular.ttf */; };
+		17F0319C1FF61A73005BAD72 /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031941FF61A73005BAD72 /* Ubuntu-Bold.ttf */; };
+		17F0319D1FF61A73005BAD72 /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031951FF61A73005BAD72 /* Ubuntu-MediumItalic.ttf */; };
+		17F0319E1FF61A73005BAD72 /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031961FF61A73005BAD72 /* Ubuntu-BoldItalic.ttf */; };
+		17F0319F1FF61A73005BAD72 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031971FF61A73005BAD72 /* Ubuntu-Italic.ttf */; };
+		17F031A01FF61A73005BAD72 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F031981FF61A73005BAD72 /* Ubuntu-Light.ttf */; };
+		17F031B31FF6251B005BAD72 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031B11FF6251B005BAD72 /* SignInVC.swift */; };
+		17F031B41FF6251B005BAD72 /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F031B21FF6251B005BAD72 /* SignInVC.xib */; };
+		6B6777279B489DE3398C14E1 /* Pods_EventifyManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C597BA37F7097308CA50C7 /* Pods_EventifyManager.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		172BBB931FF5F785003D6D7A /* EventifyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventifyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C8EC55ABDD2AC0012EF429 /* Pods-EventifyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventifyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager.debug.xcconfig"; sourceTree = "<group>"; };
+		17F030891FF61631005BAD72 /* TicketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketManager.swift; sourceTree = "<group>"; };
+		17F0308A1FF61631005BAD72 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		17F0308C1FF61631005BAD72 /* DayOfWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
+		17F0308D1FF61631005BAD72 /* InfoUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserView.swift; sourceTree = "<group>"; };
+		17F030921FF61631005BAD72 /* TicketObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketObject.swift; sourceTree = "<group>"; };
+		17F030931FF61631005BAD72 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		17F030941FF61631005BAD72 /* EventObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
+		17F030951FF61631005BAD72 /* AddressObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressObject.swift; sourceTree = "<group>"; };
+		17F030961FF61631005BAD72 /* TicketOrderObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketOrderObject.swift; sourceTree = "<group>"; };
+		17F030971FF61631005BAD72 /* TypeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeObject.swift; sourceTree = "<group>"; };
+		17F030981FF61631005BAD72 /* OrderObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderObject.swift; sourceTree = "<group>"; };
+		17F0309A1FF61631005BAD72 /* Extensions+UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UINavigationController.swift"; sourceTree = "<group>"; };
+		17F0309B1FF61631005BAD72 /* Extensions+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
+		17F0309C1FF61631005BAD72 /* Extensions+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImageView.swift"; sourceTree = "<group>"; };
+		17F0309D1FF61631005BAD72 /* Extensions+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Double.swift"; sourceTree = "<group>"; };
+		17F0309E1FF61631005BAD72 /* Extensions+UIActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		17F0309F1FF61631005BAD72 /* Extensions+Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Int.swift"; sourceTree = "<group>"; };
+		17F030A01FF61631005BAD72 /* Extensions+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Date.swift"; sourceTree = "<group>"; };
+		17F030A11FF61631005BAD72 /* Extensions+NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+NSError.swift"; sourceTree = "<group>"; };
+		17F030A21FF61631005BAD72 /* Extensions+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Data.swift"; sourceTree = "<group>"; };
+		17F030A31FF61631005BAD72 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		17F030A41FF61631005BAD72 /* Extensions+HTTPURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+HTTPURLResponse.swift"; sourceTree = "<group>"; };
+		17F030A51FF61631005BAD72 /* Extensions+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImage.swift"; sourceTree = "<group>"; };
+		17F030F01FF61631005BAD72 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		17F030F21FF61631005BAD72 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		17F030F61FF61631005BAD72 /* DialogNetworkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogNetworkVC.swift; sourceTree = "<group>"; };
+		17F030F81FF61631005BAD72 /* LaunchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
+		17F030F91FF61631005BAD72 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17F030FB1FF61631005BAD72 /* EventProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventProtocols.swift; sourceTree = "<group>"; };
+		17F030FC1FF61631005BAD72 /* ActionTicketDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTicketDelegate.swift; sourceTree = "<group>"; };
+		17F030FD1FF61631005BAD72 /* OrderEventDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderEventDelegate.swift; sourceTree = "<group>"; };
+		17F030FE1FF61631005BAD72 /* InteractiveEventProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveEventProtocol.swift; sourceTree = "<group>"; };
+		17F030FF1FF61631005BAD72 /* UpdateProfilesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfilesProtocol.swift; sourceTree = "<group>"; };
+		17F031011FF61631005BAD72 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		17F031031FF61631005BAD72 /* TicketServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketServices.swift; sourceTree = "<group>"; };
+		17F031041FF61631005BAD72 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		17F031051FF61631005BAD72 /* EventServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
+		17F031061FF61631005BAD72 /* SocketIOServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOServices.swift; sourceTree = "<group>"; };
+		17F031071FF61631005BAD72 /* OrderServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderServices.swift; sourceTree = "<group>"; };
+		17F031081FF61631005BAD72 /* TypeEventServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeEventServices.swift; sourceTree = "<group>"; };
+		17F031091FF61631005BAD72 /* GoogleMapsServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsServices.swift; sourceTree = "<group>"; };
+		17F031151FF61631005BAD72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		17F031181FF61631005BAD72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17F031191FF61631005BAD72 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17F031771FF6164D005BAD72 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		17F031791FF61676005BAD72 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		17F0317C1FF61731005BAD72 /* MyEventsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsVC.swift; sourceTree = "<group>"; };
+		17F031801FF617EF005BAD72 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		17F031831FF6185B005BAD72 /* MyEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventCell.swift; sourceTree = "<group>"; };
+		17F031841FF6185B005BAD72 /* MyEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEventCell.xib; sourceTree = "<group>"; };
+		17F031891FF618C7005BAD72 /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
+		17F031911FF61A73005BAD72 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		17F031921FF61A73005BAD72 /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		17F031931FF61A73005BAD72 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		17F031941FF61A73005BAD72 /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		17F031951FF61A73005BAD72 /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		17F031961FF61A73005BAD72 /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
+		17F031971FF61A73005BAD72 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		17F031981FF61A73005BAD72 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		17F031B11FF6251B005BAD72 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		17F031B21FF6251B005BAD72 /* SignInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
+		32270DBBB33EEAFD9A9E590E /* Pods-EventifyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventifyManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager.release.xcconfig"; sourceTree = "<group>"; };
+		54C597BA37F7097308CA50C7 /* Pods_EventifyManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventifyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		172BBB901FF5F785003D6D7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6777279B489DE3398C14E1 /* Pods_EventifyManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		172BBB8A1FF5F785003D6D7A = {
+			isa = PBXGroup;
+			children = (
+				172BBB951FF5F785003D6D7A /* EventifyManager */,
+				172BBB941FF5F785003D6D7A /* Products */,
+				EA1F3FA08991049FF23828BB /* Pods */,
+				BC0141AB74431F13BCF66490 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		172BBB941FF5F785003D6D7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				172BBB931FF5F785003D6D7A /* EventifyManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		172BBB951FF5F785003D6D7A /* EventifyManager */ = {
+			isa = PBXGroup;
+			children = (
+				17F030871FF61631005BAD72 /* Classes */,
+				17F0310A1FF61631005BAD72 /* Resources */,
+				17F031161FF61631005BAD72 /* Storyboards */,
+				17F031171FF61631005BAD72 /* Supporting Files */,
+			);
+			path = EventifyManager;
+			sourceTree = "<group>";
+		};
+		17F030871FF61631005BAD72 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				17F030881FF61631005BAD72 /* Managers */,
+				17F0308B1FF61631005BAD72 /* Enums */,
+				17F030911FF61631005BAD72 /* Models */,
+				17F030991FF61631005BAD72 /* Extensions */,
+				17F030A61FF61631005BAD72 /* UIs */,
+				17F030F71FF61631005BAD72 /* Apps */,
+				17F030FA1FF61631005BAD72 /* Protocols */,
+				17F031001FF61631005BAD72 /* Helpers */,
+				17F031021FF61631005BAD72 /* Services */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		17F030881FF61631005BAD72 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				17F030891FF61631005BAD72 /* TicketManager.swift */,
+				17F0308A1FF61631005BAD72 /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		17F0308B1FF61631005BAD72 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				17F0308C1FF61631005BAD72 /* DayOfWeek.swift */,
+				17F0308D1FF61631005BAD72 /* InfoUserView.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		17F030911FF61631005BAD72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17F030921FF61631005BAD72 /* TicketObject.swift */,
+				17F030931FF61631005BAD72 /* UserObject.swift */,
+				17F030941FF61631005BAD72 /* EventObject.swift */,
+				17F030951FF61631005BAD72 /* AddressObject.swift */,
+				17F030961FF61631005BAD72 /* TicketOrderObject.swift */,
+				17F030971FF61631005BAD72 /* TypeObject.swift */,
+				17F030981FF61631005BAD72 /* OrderObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17F030991FF61631005BAD72 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17F0309A1FF61631005BAD72 /* Extensions+UINavigationController.swift */,
+				17F0309B1FF61631005BAD72 /* Extensions+String.swift */,
+				17F0309C1FF61631005BAD72 /* Extensions+UIImageView.swift */,
+				17F0309D1FF61631005BAD72 /* Extensions+Double.swift */,
+				17F0309E1FF61631005BAD72 /* Extensions+UIActivityIndicatorView.swift */,
+				17F0309F1FF61631005BAD72 /* Extensions+Int.swift */,
+				17F030A01FF61631005BAD72 /* Extensions+Date.swift */,
+				17F030A11FF61631005BAD72 /* Extensions+NSError.swift */,
+				17F030A21FF61631005BAD72 /* Extensions+Data.swift */,
+				17F030A31FF61631005BAD72 /* Extensions+UIViewController.swift */,
+				17F030A41FF61631005BAD72 /* Extensions+HTTPURLResponse.swift */,
+				17F030A51FF61631005BAD72 /* Extensions+UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17F030A61FF61631005BAD72 /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				17F030A71FF61631005BAD72 /* Home */,
+				17F030EF1FF61631005BAD72 /* ForgotPassword */,
+				17F030F11FF61631005BAD72 /* SignUp */,
+				17F030F31FF61631005BAD72 /* SignIn */,
+				17F030F51FF61631005BAD72 /* Dialogs */,
+			);
+			path = UIs;
+			sourceTree = "<group>";
+		};
+		17F030A71FF61631005BAD72 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				17F0317B1FF6171E005BAD72 /* MyEvents */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		17F030EF1FF61631005BAD72 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				17F030F01FF61631005BAD72 /* ForgotPasswordVC.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		17F030F11FF61631005BAD72 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				17F030F21FF61631005BAD72 /* SignUpVC.swift */,
+				17F031891FF618C7005BAD72 /* SignUpVC.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		17F030F31FF61631005BAD72 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				17F031B11FF6251B005BAD72 /* SignInVC.swift */,
+				17F031B21FF6251B005BAD72 /* SignInVC.xib */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		17F030F51FF61631005BAD72 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				17F030F61FF61631005BAD72 /* DialogNetworkVC.swift */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		17F030F71FF61631005BAD72 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				17F030F81FF61631005BAD72 /* LaunchVC.swift */,
+				17F030F91FF61631005BAD72 /* AppDelegate.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		17F030FA1FF61631005BAD72 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				17F030FB1FF61631005BAD72 /* EventProtocols.swift */,
+				17F030FC1FF61631005BAD72 /* ActionTicketDelegate.swift */,
+				17F030FD1FF61631005BAD72 /* OrderEventDelegate.swift */,
+				17F030FE1FF61631005BAD72 /* InteractiveEventProtocol.swift */,
+				17F030FF1FF61631005BAD72 /* UpdateProfilesProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		17F031001FF61631005BAD72 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				17F031011FF61631005BAD72 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		17F031021FF61631005BAD72 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				17F031031FF61631005BAD72 /* TicketServices.swift */,
+				17F031041FF61631005BAD72 /* UserServices.swift */,
+				17F031051FF61631005BAD72 /* EventServices.swift */,
+				17F031061FF61631005BAD72 /* SocketIOServices.swift */,
+				17F031071FF61631005BAD72 /* OrderServices.swift */,
+				17F031081FF61631005BAD72 /* TypeEventServices.swift */,
+				17F031091FF61631005BAD72 /* GoogleMapsServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		17F0310A1FF61631005BAD72 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17F0318F1FF61A73005BAD72 /* Fonts */,
+				17F031151FF61631005BAD72 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		17F031161FF61631005BAD72 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				17F031771FF6164D005BAD72 /* Launch Screen.storyboard */,
+				17F031791FF61676005BAD72 /* Launch.storyboard */,
+				17F031801FF617EF005BAD72 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		17F031171FF61631005BAD72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17F031181FF61631005BAD72 /* GoogleService-Info.plist */,
+				17F031191FF61631005BAD72 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17F0317B1FF6171E005BAD72 /* MyEvents */ = {
+			isa = PBXGroup;
+			children = (
+				17F031821FF61847005BAD72 /* MyEventCell */,
+				17F0317C1FF61731005BAD72 /* MyEventsVC.swift */,
+			);
+			path = MyEvents;
+			sourceTree = "<group>";
+		};
+		17F031821FF61847005BAD72 /* MyEventCell */ = {
+			isa = PBXGroup;
+			children = (
+				17F031831FF6185B005BAD72 /* MyEventCell.swift */,
+				17F031841FF6185B005BAD72 /* MyEventCell.xib */,
+			);
+			path = MyEventCell;
+			sourceTree = "<group>";
+		};
+		17F0318F1FF61A73005BAD72 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				17F031901FF61A73005BAD72 /* Ubuntu */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		17F031901FF61A73005BAD72 /* Ubuntu */ = {
+			isa = PBXGroup;
+			children = (
+				17F031911FF61A73005BAD72 /* Ubuntu-Medium.ttf */,
+				17F031921FF61A73005BAD72 /* Ubuntu-LightItalic.ttf */,
+				17F031931FF61A73005BAD72 /* Ubuntu-Regular.ttf */,
+				17F031941FF61A73005BAD72 /* Ubuntu-Bold.ttf */,
+				17F031951FF61A73005BAD72 /* Ubuntu-MediumItalic.ttf */,
+				17F031961FF61A73005BAD72 /* Ubuntu-BoldItalic.ttf */,
+				17F031971FF61A73005BAD72 /* Ubuntu-Italic.ttf */,
+				17F031981FF61A73005BAD72 /* Ubuntu-Light.ttf */,
+			);
+			path = Ubuntu;
+			sourceTree = "<group>";
+		};
+		BC0141AB74431F13BCF66490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54C597BA37F7097308CA50C7 /* Pods_EventifyManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA1F3FA08991049FF23828BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17C8EC55ABDD2AC0012EF429 /* Pods-EventifyManager.debug.xcconfig */,
+				32270DBBB33EEAFD9A9E590E /* Pods-EventifyManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		172BBB921FF5F785003D6D7A /* EventifyManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 172BBBA51FF5F785003D6D7A /* Build configuration list for PBXNativeTarget "EventifyManager" */;
+			buildPhases = (
+				AB1C40B48D3C8963FB75279B /* [CP] Check Pods Manifest.lock */,
+				172BBB8F1FF5F785003D6D7A /* Sources */,
+				172BBB901FF5F785003D6D7A /* Frameworks */,
+				172BBB911FF5F785003D6D7A /* Resources */,
+				3EBDB4E834D5109A7F34765D /* [CP] Embed Pods Frameworks */,
+				AB96F611AA5EFA09FEC809C5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventifyManager;
+			productName = EventifyManager;
+			productReference = 172BBB931FF5F785003D6D7A /* EventifyManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		172BBB8B1FF5F785003D6D7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Lê Anh Tuấn";
+				TargetAttributes = {
+					172BBB921FF5F785003D6D7A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = VGQU7EVXZV;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 172BBB8E1FF5F785003D6D7A /* Build configuration list for PBXProject "EventifyManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 172BBB8A1FF5F785003D6D7A;
+			productRefGroup = 172BBB941FF5F785003D6D7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				172BBB921FF5F785003D6D7A /* EventifyManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		172BBB911FF5F785003D6D7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F0319B1FF61A73005BAD72 /* Ubuntu-Regular.ttf in Resources */,
+				17F031861FF6185C005BAD72 /* MyEventCell.xib in Resources */,
+				17F031B41FF6251B005BAD72 /* SignInVC.xib in Resources */,
+				17F031A01FF61A73005BAD72 /* Ubuntu-Light.ttf in Resources */,
+				17F0319F1FF61A73005BAD72 /* Ubuntu-Italic.ttf in Resources */,
+				17F0319D1FF61A73005BAD72 /* Ubuntu-MediumItalic.ttf in Resources */,
+				17F0319A1FF61A73005BAD72 /* Ubuntu-LightItalic.ttf in Resources */,
+				17F031741FF61631005BAD72 /* Images.xcassets in Resources */,
+				17F0319C1FF61A73005BAD72 /* Ubuntu-Bold.ttf in Resources */,
+				17F031761FF61631005BAD72 /* Info.plist in Resources */,
+				17F031991FF61A73005BAD72 /* Ubuntu-Medium.ttf in Resources */,
+				17F031781FF6164D005BAD72 /* Launch Screen.storyboard in Resources */,
+				17F0318A1FF618C7005BAD72 /* SignUpVC.xib in Resources */,
+				17F0319E1FF61A73005BAD72 /* Ubuntu-BoldItalic.ttf in Resources */,
+				17F0317A1FF61676005BAD72 /* Launch.storyboard in Resources */,
+				17F031811FF617EF005BAD72 /* Main.storyboard in Resources */,
+				17F031751FF61631005BAD72 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EBDB4E834D5109A7F34765D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/HanekeSwift/Haneke.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB1C40B48D3C8963FB75279B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EventifyManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB96F611AA5EFA09FEC809C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		172BBB8F1FF5F785003D6D7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F031261FF61631005BAD72 /* Extensions+String.swift in Sources */,
+				17F031291FF61631005BAD72 /* Extensions+UIActivityIndicatorView.swift in Sources */,
+				17F0315E1FF61631005BAD72 /* AppDelegate.swift in Sources */,
+				17F031851FF6185B005BAD72 /* MyEventCell.swift in Sources */,
+				17F031241FF61631005BAD72 /* OrderObject.swift in Sources */,
+				17F0317E1FF61731005BAD72 /* MyEventsVC.swift in Sources */,
+				17F031271FF61631005BAD72 /* Extensions+UIImageView.swift in Sources */,
+				17F031681FF61631005BAD72 /* SocketIOServices.swift in Sources */,
+				17F0311C1FF61631005BAD72 /* DayOfWeek.swift in Sources */,
+				17F0315A1FF61631005BAD72 /* SignUpVC.swift in Sources */,
+				17F0312D1FF61631005BAD72 /* Extensions+Data.swift in Sources */,
+				17F0312F1FF61631005BAD72 /* Extensions+HTTPURLResponse.swift in Sources */,
+				17F0312C1FF61631005BAD72 /* Extensions+NSError.swift in Sources */,
+				17F0316A1FF61631005BAD72 /* TypeEventServices.swift in Sources */,
+				17F031691FF61631005BAD72 /* OrderServices.swift in Sources */,
+				17F0311B1FF61631005BAD72 /* UserManager.swift in Sources */,
+				17F031591FF61631005BAD72 /* ForgotPasswordVC.swift in Sources */,
+				17F031631FF61631005BAD72 /* UpdateProfilesProtocol.swift in Sources */,
+				17F031251FF61631005BAD72 /* Extensions+UINavigationController.swift in Sources */,
+				17F031301FF61631005BAD72 /* Extensions+UIImage.swift in Sources */,
+				17F031201FF61631005BAD72 /* EventObject.swift in Sources */,
+				17F031651FF61631005BAD72 /* TicketServices.swift in Sources */,
+				17F031B31FF6251B005BAD72 /* SignInVC.swift in Sources */,
+				17F031611FF61631005BAD72 /* OrderEventDelegate.swift in Sources */,
+				17F031661FF61631005BAD72 /* UserServices.swift in Sources */,
+				17F031211FF61631005BAD72 /* AddressObject.swift in Sources */,
+				17F0315D1FF61631005BAD72 /* LaunchVC.swift in Sources */,
+				17F0316B1FF61631005BAD72 /* GoogleMapsServices.swift in Sources */,
+				17F031281FF61631005BAD72 /* Extensions+Double.swift in Sources */,
+				17F0312E1FF61631005BAD72 /* Extensions+UIViewController.swift in Sources */,
+				17F0311A1FF61631005BAD72 /* TicketManager.swift in Sources */,
+				17F0311D1FF61631005BAD72 /* InfoUserView.swift in Sources */,
+				17F031671FF61631005BAD72 /* EventServices.swift in Sources */,
+				17F0311E1FF61631005BAD72 /* TicketObject.swift in Sources */,
+				17F031221FF61631005BAD72 /* TicketOrderObject.swift in Sources */,
+				17F031231FF61631005BAD72 /* TypeObject.swift in Sources */,
+				17F0312B1FF61631005BAD72 /* Extensions+Date.swift in Sources */,
+				17F0315F1FF61631005BAD72 /* EventProtocols.swift in Sources */,
+				17F031621FF61631005BAD72 /* InteractiveEventProtocol.swift in Sources */,
+				17F0315C1FF61631005BAD72 /* DialogNetworkVC.swift in Sources */,
+				17F0311F1FF61631005BAD72 /* UserObject.swift in Sources */,
+				17F031641FF61631005BAD72 /* Helpers.swift in Sources */,
+				17F0312A1FF61631005BAD72 /* Extensions+Int.swift in Sources */,
+				17F031601FF61631005BAD72 /* ActionTicketDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		172BBBA31FF5F785003D6D7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		172BBBA41FF5F785003D6D7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		172BBBA61FF5F785003D6D7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C8EC55ABDD2AC0012EF429 /* Pods-EventifyManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VGQU7EVXZV;
+				INFOPLIST_FILE = "$(SRCROOT)/EventifyManager/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventify.EventifyManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		172BBBA71FF5F785003D6D7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32270DBBB33EEAFD9A9E590E /* Pods-EventifyManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VGQU7EVXZV;
+				INFOPLIST_FILE = "$(SRCROOT)/EventifyManager/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventify.EventifyManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		172BBB8E1FF5F785003D6D7A /* Build configuration list for PBXProject "EventifyManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				172BBBA31FF5F785003D6D7A /* Debug */,
+				172BBBA41FF5F785003D6D7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		172BBBA51FF5F785003D6D7A /* Build configuration list for PBXNativeTarget "EventifyManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				172BBBA61FF5F785003D6D7A /* Debug */,
+				172BBBA71FF5F785003D6D7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 172BBB8B1FF5F785003D6D7A /* Project object */;
+}

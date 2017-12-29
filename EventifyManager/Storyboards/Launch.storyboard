@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SfU-4b-AKL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Zapfino.ttf">
+            <string>Zapfino</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--LaunchVC-->
+        <scene sceneID="Rbf-B2-IJe">
+            <objects>
+                <viewController storyboardIdentifier="LaunchVC" id="SfU-4b-AKL" customClass="LaunchVC" customModule="EventifyManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zA9-v9-cfa"/>
+                        <viewControllerLayoutGuide type="bottom" id="vkO-Uh-ZLj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="91y-OF-jII">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ujK-ft-WnU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-5u-6Ky">
+                                <rect key="frame" x="100" y="100" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="8NG-IL-Fj8"/>
+                                    <constraint firstAttribute="width" constant="175" id="Wph-8f-GT3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eventify Manager" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bk-ca-K0o">
+                                <rect key="frame" x="15" y="290" width="345" height="243.5"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6bk-ca-K0o" firstAttribute="top" secondItem="QyH-5u-6Ky" secondAttribute="bottom" constant="15" id="1NS-XE-QuQ"/>
+                            <constraint firstAttribute="trailing" secondItem="6bk-ca-K0o" secondAttribute="trailing" constant="15" id="2hi-Hc-XW2"/>
+                            <constraint firstItem="ujK-ft-WnU" firstAttribute="top" secondItem="91y-OF-jII" secondAttribute="top" id="804-gn-PRM"/>
+                            <constraint firstItem="ujK-ft-WnU" firstAttribute="leading" secondItem="91y-OF-jII" secondAttribute="leading" id="IE3-rM-kiw"/>
+                            <constraint firstItem="QyH-5u-6Ky" firstAttribute="top" secondItem="zA9-v9-cfa" secondAttribute="bottom" constant="80" id="Tzh-Nz-DP8"/>
+                            <constraint firstItem="6bk-ca-K0o" firstAttribute="leading" secondItem="91y-OF-jII" secondAttribute="leading" constant="15" id="mfd-gE-fYz"/>
+                            <constraint firstItem="vkO-Uh-ZLj" firstAttribute="top" secondItem="ujK-ft-WnU" secondAttribute="bottom" id="r3K-xH-hak"/>
+                            <constraint firstAttribute="trailing" secondItem="ujK-ft-WnU" secondAttribute="trailing" id="ubC-38-4c6"/>
+                            <constraint firstItem="QyH-5u-6Ky" firstAttribute="centerX" secondItem="ujK-ft-WnU" secondAttribute="centerX" id="uzy-kM-LYe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgLogo" destination="QyH-5u-6Ky" id="FPO-Nf-Ouy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIX-fL-FeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1080" height="1920"/>
+        <image name="icon" width="200" height="200"/>
+    </resources>
+</document>
