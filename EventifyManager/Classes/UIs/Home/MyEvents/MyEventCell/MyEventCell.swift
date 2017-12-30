@@ -21,7 +21,7 @@ class MyEventCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUpUi()
+        setUpUi()        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -45,7 +45,7 @@ class MyEventCell: UITableViewCell {
         self.summaryView.layer.masksToBounds = true;
         self.summaryView.clipsToBounds = true;
         self.summaryView.layer.borderWidth = 1
-        self.summaryView.layer.borderColor = UIColor.green.cgColor
+        self.summaryView.layer.borderColor = #colorLiteral(red: 0.3704946637, green: 0.7438001037, blue: 0.6115635633, alpha: 1).cgColor
         
         self.checkInView.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.checkInView.layer.shadowColor = UIColor.black.cgColor

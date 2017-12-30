@@ -23,11 +23,14 @@ class MyEventsVC: UIViewController {
     
     var refreshControl: UIRefreshControl!
     var selectedTypeEvents: SelectedTypeEvents = .upcomingEvents
+    var myEvents = [EventObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpUI()
+        
+        loadMyEvents()
     }
     
     func setUpUI() {
@@ -55,6 +58,17 @@ class MyEventsVC: UIViewController {
     
     func refresh() {
         
+    }
+    
+    func loadMyEvents() {
+        EventServices.shared.getMyEvents { (events, error) in
+            if let error = error {
+                self.showAlert(error, title: "Whoops", buttons: nil)
+            } else {
+                self.myEvents = events ?? []
+                self.tblEvents.reloadData()
+            }
+        }
     }
     
     @IBAction func btnEventsClicked(_ sender: Any) {
@@ -93,7 +107,7 @@ class MyEventsVC: UIViewController {
 extension MyEventsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.myEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,10 +116,15 @@ extension MyEventsVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        if let link = self.myEvents[indexPath.row].photoCoverPath {
+            cell.imgPhoto.downloadedFrom(link: link)
+        }
+        
+        cell.event = self.myEvents[indexPath.row]
+        cell.lblName.text = self.myEvents[indexPath.row].name
+        cell.lblAddress.text = self.myEvents[indexPath.row].address?.address
+        
+        
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
     }
 }

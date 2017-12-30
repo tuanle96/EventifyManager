@@ -17,14 +17,14 @@ class EventServices: NSObject {
     let socket = SocketIOServices.shared
     let socketEvent = SocketIOServices.shared.socket
     
-    func getEvents(completionHandler: @escaping(_ events: [EventObject]?, _ error: String?) -> Void) {
+    func getMyEvents(completionHandler: @escaping(_ events: [EventObject]?, _ error: String?) -> Void) {
         guard let token = UserManager.shared.currentUser?.token else {
             return completionHandler(nil, "Token not found")
         }
         
-        socketEvent.emit("get-events", with: [token])
-        socketEvent.off("get-events")
-        socketEvent.on("get-events") { (data, ack) in
+        socketEvent.emit("get-my-events", with: [token])
+        socketEvent.off("get-my-events")
+        socketEvent.on("get-my-events") { (data, ack) in
             
             Helpers.errorHandler(with: data, completionHandler: { (json, error) in
                 if let error = error {
@@ -41,7 +41,7 @@ class EventServices: NSObject {
                     return completionHandler([], nil)
                 }
                 
-                //print(json)
+                print(json)
                 
                 //try parse from json to object
                 guard let events = [EventObject].from(jsonArray: json) else {

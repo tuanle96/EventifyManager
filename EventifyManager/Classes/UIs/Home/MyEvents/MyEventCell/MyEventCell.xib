@@ -90,10 +90,17 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-0V-AHS">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jzY-0V-AHS" secondAttribute="trailing" id="9Q0-bk-YE2"/>
+                                            <constraint firstAttribute="bottom" secondItem="jzY-0V-AHS" secondAttribute="bottom" id="H8l-eX-kj8"/>
+                                            <constraint firstItem="jzY-0V-AHS" firstAttribute="leading" secondItem="jHV-qZ-msr" secondAttribute="leading" id="QV4-8q-AuV"/>
                                             <constraint firstItem="Zor-mI-5ih" firstAttribute="centerX" secondItem="jHV-qZ-msr" secondAttribute="centerX" id="lBS-iR-FYV"/>
+                                            <constraint firstItem="jzY-0V-AHS" firstAttribute="top" secondItem="jHV-qZ-msr" secondAttribute="top" id="oBP-5i-vnc"/>
                                             <constraint firstItem="Zor-mI-5ih" firstAttribute="centerY" secondItem="jHV-qZ-msr" secondAttribute="centerY" id="tQF-ij-RMG"/>
                                             <constraint firstAttribute="height" constant="40" id="wTA-Qa-MLf"/>
                                         </constraints>
@@ -124,11 +131,18 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PF-Dq-oZ4">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.3704946637" green="0.74380010370000005" blue="0.61156356329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="3PF-Dq-oZ4" firstAttribute="leading" secondItem="G2s-sL-ugh" secondAttribute="leading" id="GtD-Ci-gA9"/>
                                             <constraint firstItem="onu-Nd-EG4" firstAttribute="centerY" secondItem="G2s-sL-ugh" secondAttribute="centerY" id="HFZ-uQ-a82"/>
                                             <constraint firstItem="onu-Nd-EG4" firstAttribute="centerX" secondItem="G2s-sL-ugh" secondAttribute="centerX" id="VOg-t9-c0O"/>
+                                            <constraint firstItem="3PF-Dq-oZ4" firstAttribute="top" secondItem="G2s-sL-ugh" secondAttribute="top" id="aiR-eB-EBp"/>
+                                            <constraint firstAttribute="trailing" secondItem="3PF-Dq-oZ4" secondAttribute="trailing" id="frl-Al-zIh"/>
+                                            <constraint firstAttribute="bottom" secondItem="3PF-Dq-oZ4" secondAttribute="bottom" id="ywS-Yc-VEq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
