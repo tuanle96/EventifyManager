@@ -57,11 +57,16 @@ class MyEventsVC: UIViewController {
     }
     
     func refresh() {
-        
+        loadMyEvents(false)
     }
     
-    func loadMyEvents() {
-        EventServices.shared.getMyEvents { (events, error) in
+    func loadMyEvents(_ isListening: Bool = true) {
+        EventServices.shared.getMyEvents(isListening) { (events, error) in
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
             if let error = error {
                 self.showAlert(error, title: "Whoops", buttons: nil)
             } else {
@@ -79,26 +84,17 @@ class MyEventsVC: UIViewController {
         btnPreviousEvent.backgroundColor = #colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998719096, alpha: 1)
         btnPreviousEvent.layer.zPosition = 99
         btnPreviousEvent.setTitleColor(#colorLiteral(red: 0.6353397965, green: 0.6384146214, blue: 0.7479377389, alpha: 1), for: UIControlState.normal)
-        
-        if self.selectedTypeEvents == .upcomingEvents {
-            return
-        }
-        
         self.selectedTypeEvents = .upcomingEvents
     }
     
     @IBAction func btnPlacesClicked(_ sender: Any) {
-        btnUpcomingEvent.backgroundColor = #colorLiteral(red: 0.6353397965, green: 0.6384146214, blue: 0.7479377389, alpha: 1)
-        btnUpcomingEvent.layer.zPosition = 100
-        btnUpcomingEvent.setTitleColor(#colorLiteral(red: 0.9714086652, green: 0.9793576598, blue: 0.9995563626, alpha: 1), for: UIControlState.normal)
+        btnPreviousEvent.backgroundColor = #colorLiteral(red: 0.6353397965, green: 0.6384146214, blue: 0.7479377389, alpha: 1)
+        btnPreviousEvent.layer.zPosition = 100
+        btnPreviousEvent.setTitleColor(#colorLiteral(red: 0.9714086652, green: 0.9793576598, blue: 0.9995563626, alpha: 1), for: UIControlState.normal)
         
-        btnPreviousEvent.backgroundColor = #colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998719096, alpha: 1)
-        btnPreviousEvent.layer.zPosition = 99
-        btnPreviousEvent.setTitleColor(#colorLiteral(red: 0.6353397965, green: 0.6384146214, blue: 0.7479377389, alpha: 1), for: UIControlState.normal)
-        
-        if self.selectedTypeEvents == .previousEvents {
-            return
-        }
+        btnUpcomingEvent.backgroundColor = #colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998719096, alpha: 1)
+        btnUpcomingEvent.layer.zPosition = 99
+        btnUpcomingEvent.setTitleColor(#colorLiteral(red: 0.6353397965, green: 0.6384146214, blue: 0.7479377389, alpha: 1), for: UIControlState.normal)
         
         self.selectedTypeEvents = .previousEvents
     }
@@ -123,8 +119,20 @@ extension MyEventsVC: UITableViewDelegate, UITableViewDataSource {
         cell.event = self.myEvents[indexPath.row]
         cell.lblName.text = self.myEvents[indexPath.row].name
         cell.lblAddress.text = self.myEvents[indexPath.row].address?.address
-        
+        cell.delegate = self
         
         return cell
+    }
+}
+
+extension MyEventsVC: MyEventDelegate {
+    //open summary view controller
+    func viewSummary() -> Void {
+        print("view summary")
+    }
+    
+    //open check in view controller
+    func checkIn() -> Void {
+        print("check in")
     }
 }

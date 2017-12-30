@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17E1CCE11FF780FF002A783E /* MyEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE01FF780FF002A783E /* MyEventDelegate.swift */; };
+		17E1CCE61FF78C8F002A783E /* CheckInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE51FF78C8F002A783E /* CheckInVC.swift */; };
+		17E1CCE81FF78CA6002A783E /* OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE71FF78CA6002A783E /* OrderListVC.swift */; };
+		17E1CCEA1FF78CB1002A783E /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE91FF78CB1002A783E /* SummaryVC.swift */; };
 		17F0311A1FF61631005BAD72 /* TicketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030891FF61631005BAD72 /* TicketManager.swift */; };
 		17F0311B1FF61631005BAD72 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0308A1FF61631005BAD72 /* UserManager.swift */; };
 		17F0311C1FF61631005BAD72 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0308C1FF61631005BAD72 /* DayOfWeek.swift */; };
@@ -32,14 +36,8 @@
 		17F031301FF61631005BAD72 /* Extensions+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030A51FF61631005BAD72 /* Extensions+UIImage.swift */; };
 		17F031591FF61631005BAD72 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F01FF61631005BAD72 /* ForgotPasswordVC.swift */; };
 		17F0315A1FF61631005BAD72 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F21FF61631005BAD72 /* SignUpVC.swift */; };
-		17F0315C1FF61631005BAD72 /* DialogNetworkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F61FF61631005BAD72 /* DialogNetworkVC.swift */; };
 		17F0315D1FF61631005BAD72 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F81FF61631005BAD72 /* LaunchVC.swift */; };
 		17F0315E1FF61631005BAD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030F91FF61631005BAD72 /* AppDelegate.swift */; };
-		17F0315F1FF61631005BAD72 /* EventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FB1FF61631005BAD72 /* EventProtocols.swift */; };
-		17F031601FF61631005BAD72 /* ActionTicketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FC1FF61631005BAD72 /* ActionTicketDelegate.swift */; };
-		17F031611FF61631005BAD72 /* OrderEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FD1FF61631005BAD72 /* OrderEventDelegate.swift */; };
-		17F031621FF61631005BAD72 /* InteractiveEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FE1FF61631005BAD72 /* InteractiveEventProtocol.swift */; };
-		17F031631FF61631005BAD72 /* UpdateProfilesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F030FF1FF61631005BAD72 /* UpdateProfilesProtocol.swift */; };
 		17F031641FF61631005BAD72 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031011FF61631005BAD72 /* Helpers.swift */; };
 		17F031651FF61631005BAD72 /* TicketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031031FF61631005BAD72 /* TicketServices.swift */; };
 		17F031661FF61631005BAD72 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F031041FF61631005BAD72 /* UserServices.swift */; };
@@ -74,6 +72,10 @@
 /* Begin PBXFileReference section */
 		172BBB931FF5F785003D6D7A /* EventifyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventifyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C8EC55ABDD2AC0012EF429 /* Pods-EventifyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventifyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager.debug.xcconfig"; sourceTree = "<group>"; };
+		17E1CCE01FF780FF002A783E /* MyEventDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventDelegate.swift; sourceTree = "<group>"; };
+		17E1CCE51FF78C8F002A783E /* CheckInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInVC.swift; sourceTree = "<group>"; };
+		17E1CCE71FF78CA6002A783E /* OrderListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListVC.swift; sourceTree = "<group>"; };
+		17E1CCE91FF78CB1002A783E /* SummaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
 		17F030891FF61631005BAD72 /* TicketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketManager.swift; sourceTree = "<group>"; };
 		17F0308A1FF61631005BAD72 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		17F0308C1FF61631005BAD72 /* DayOfWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
@@ -99,14 +101,8 @@
 		17F030A51FF61631005BAD72 /* Extensions+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImage.swift"; sourceTree = "<group>"; };
 		17F030F01FF61631005BAD72 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		17F030F21FF61631005BAD72 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		17F030F61FF61631005BAD72 /* DialogNetworkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogNetworkVC.swift; sourceTree = "<group>"; };
 		17F030F81FF61631005BAD72 /* LaunchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		17F030F91FF61631005BAD72 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17F030FB1FF61631005BAD72 /* EventProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventProtocols.swift; sourceTree = "<group>"; };
-		17F030FC1FF61631005BAD72 /* ActionTicketDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTicketDelegate.swift; sourceTree = "<group>"; };
-		17F030FD1FF61631005BAD72 /* OrderEventDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderEventDelegate.swift; sourceTree = "<group>"; };
-		17F030FE1FF61631005BAD72 /* InteractiveEventProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveEventProtocol.swift; sourceTree = "<group>"; };
-		17F030FF1FF61631005BAD72 /* UpdateProfilesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfilesProtocol.swift; sourceTree = "<group>"; };
 		17F031011FF61631005BAD72 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		17F031031FF61631005BAD72 /* TicketServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketServices.swift; sourceTree = "<group>"; };
 		17F031041FF61631005BAD72 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
@@ -178,6 +174,30 @@
 				17F031171FF61631005BAD72 /* Supporting Files */,
 			);
 			path = EventifyManager;
+			sourceTree = "<group>";
+		};
+		17E1CCE21FF78C79002A783E /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				17E1CCE91FF78CB1002A783E /* SummaryVC.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		17E1CCE31FF78C79002A783E /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				17E1CCE51FF78C8F002A783E /* CheckInVC.swift */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		17E1CCE41FF78C79002A783E /* OrderList */ = {
+			isa = PBXGroup;
+			children = (
+				17E1CCE71FF78CA6002A783E /* OrderListVC.swift */,
+			);
+			path = OrderList;
 			sourceTree = "<group>";
 		};
 		17F030871FF61631005BAD72 /* Classes */ = {
@@ -254,7 +274,6 @@
 				17F030EF1FF61631005BAD72 /* ForgotPassword */,
 				17F030F11FF61631005BAD72 /* SignUp */,
 				17F030F31FF61631005BAD72 /* SignIn */,
-				17F030F51FF61631005BAD72 /* Dialogs */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
@@ -262,6 +281,9 @@
 		17F030A71FF61631005BAD72 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				17E1CCE21FF78C79002A783E /* Summary */,
+				17E1CCE31FF78C79002A783E /* CheckIn */,
+				17E1CCE41FF78C79002A783E /* OrderList */,
 				17F0317B1FF6171E005BAD72 /* MyEvents */,
 			);
 			path = Home;
@@ -293,14 +315,6 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
-		17F030F51FF61631005BAD72 /* Dialogs */ = {
-			isa = PBXGroup;
-			children = (
-				17F030F61FF61631005BAD72 /* DialogNetworkVC.swift */,
-			);
-			path = Dialogs;
-			sourceTree = "<group>";
-		};
 		17F030F71FF61631005BAD72 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,11 +327,7 @@
 		17F030FA1FF61631005BAD72 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				17F030FB1FF61631005BAD72 /* EventProtocols.swift */,
-				17F030FC1FF61631005BAD72 /* ActionTicketDelegate.swift */,
-				17F030FD1FF61631005BAD72 /* OrderEventDelegate.swift */,
-				17F030FE1FF61631005BAD72 /* InteractiveEventProtocol.swift */,
-				17F030FF1FF61631005BAD72 /* UpdateProfilesProtocol.swift */,
+				17E1CCE01FF780FF002A783E /* MyEventDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -586,12 +596,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E1CCE81FF78CA6002A783E /* OrderListVC.swift in Sources */,
 				17F031261FF61631005BAD72 /* Extensions+String.swift in Sources */,
 				17F031291FF61631005BAD72 /* Extensions+UIActivityIndicatorView.swift in Sources */,
 				17F0315E1FF61631005BAD72 /* AppDelegate.swift in Sources */,
 				17F031851FF6185B005BAD72 /* MyEventCell.swift in Sources */,
 				17F031241FF61631005BAD72 /* OrderObject.swift in Sources */,
 				17F0317E1FF61731005BAD72 /* MyEventsVC.swift in Sources */,
+				17E1CCEA1FF78CB1002A783E /* SummaryVC.swift in Sources */,
 				17F031271FF61631005BAD72 /* Extensions+UIImageView.swift in Sources */,
 				17F031681FF61631005BAD72 /* SocketIOServices.swift in Sources */,
 				17F0311C1FF61631005BAD72 /* DayOfWeek.swift in Sources */,
@@ -602,14 +614,14 @@
 				17F0316A1FF61631005BAD72 /* TypeEventServices.swift in Sources */,
 				17F031691FF61631005BAD72 /* OrderServices.swift in Sources */,
 				17F0311B1FF61631005BAD72 /* UserManager.swift in Sources */,
+				17E1CCE61FF78C8F002A783E /* CheckInVC.swift in Sources */,
 				17F031591FF61631005BAD72 /* ForgotPasswordVC.swift in Sources */,
-				17F031631FF61631005BAD72 /* UpdateProfilesProtocol.swift in Sources */,
 				17F031251FF61631005BAD72 /* Extensions+UINavigationController.swift in Sources */,
 				17F031301FF61631005BAD72 /* Extensions+UIImage.swift in Sources */,
+				17E1CCE11FF780FF002A783E /* MyEventDelegate.swift in Sources */,
 				17F031201FF61631005BAD72 /* EventObject.swift in Sources */,
 				17F031651FF61631005BAD72 /* TicketServices.swift in Sources */,
 				17F031B31FF6251B005BAD72 /* SignInVC.swift in Sources */,
-				17F031611FF61631005BAD72 /* OrderEventDelegate.swift in Sources */,
 				17F031661FF61631005BAD72 /* UserServices.swift in Sources */,
 				17F031211FF61631005BAD72 /* AddressObject.swift in Sources */,
 				17F0315D1FF61631005BAD72 /* LaunchVC.swift in Sources */,
@@ -623,13 +635,9 @@
 				17F031221FF61631005BAD72 /* TicketOrderObject.swift in Sources */,
 				17F031231FF61631005BAD72 /* TypeObject.swift in Sources */,
 				17F0312B1FF61631005BAD72 /* Extensions+Date.swift in Sources */,
-				17F0315F1FF61631005BAD72 /* EventProtocols.swift in Sources */,
-				17F031621FF61631005BAD72 /* InteractiveEventProtocol.swift in Sources */,
-				17F0315C1FF61631005BAD72 /* DialogNetworkVC.swift in Sources */,
 				17F0311F1FF61631005BAD72 /* UserObject.swift in Sources */,
 				17F031641FF61631005BAD72 /* Helpers.swift in Sources */,
 				17F0312A1FF61631005BAD72 /* Extensions+Int.swift in Sources */,
-				17F031601FF61631005BAD72 /* ActionTicketDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Reachability
 
 
 @UIApplicationMain
@@ -15,21 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var orientationLock = UIInterfaceOrientationMask.portrait
-    let reachability = Reachability()!
-    var timer = Timer()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        //detect lost connection with server
-        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
-        
-        do{
-            try reachability.startNotifier()
-        }catch{
-            print("could not start reachability notifier")
-        }
-        
         return true
     }
     
@@ -78,58 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func showForgotPwView() {
-    }
-    
-    func reachabilityChanged(note: Notification) {
-        
-        guard let reachability = note.object as? Reachability else {
-            return
-        }
-        
-        switch reachability.connection {
-        case .wifi, .cellular:
-            hideNotiLostConnection()
-        case .none:
-            showNotiLostConnection()
-        }
-    }
-    
-    func showNotiLostConnection() {
-        
-        guard let window = self.window else {
-            return
-        }
-        
-        if let vc = UIStoryboard(name: "Dialog", bundle: nil).instantiateViewController(withIdentifier: "DialogNetworkVC") as? DialogNetworkVC {
-            vc.view.frame = window.frame
-            vc.view.tag = 100
-            self.window?.addSubview(vc.view)
-        }
-    }
-    
-    func hideNotiLostConnection() {
-        
-        let instance = SocketIOServices.shared
-        
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
-            switch instance.socket.status {
-            case .connected:
-                self.timer.invalidate()
-                self.removeSubview()
-            case .connecting:
-                break
-            case .disconnected:
-                instance.socket.connect()
-            case .notConnected:
-                instance.socket.connect()
-            }
-        })
-    }
-    
-    func removeSubview() {
-        if let dialog = self.window?.viewWithTag(100) {
-            dialog.removeFromSuperview()
-        }
     }
 }
 

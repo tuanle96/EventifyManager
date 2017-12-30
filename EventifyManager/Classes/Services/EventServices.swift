@@ -17,40 +17,69 @@ class EventServices: NSObject {
     let socket = SocketIOServices.shared
     let socketEvent = SocketIOServices.shared.socket
     
-    func getMyEvents(completionHandler: @escaping(_ events: [EventObject]?, _ error: String?) -> Void) {
+    func getMyEvents(_ isListening: Bool = true, completionHandler: @escaping(_ events: [EventObject]?, _ error: String?) -> Void) {
         guard let token = UserManager.shared.currentUser?.token else {
             return completionHandler(nil, "Token not found")
         }
         
-        socketEvent.emit("get-my-events", with: [token])
-        socketEvent.off("get-my-events")
-        socketEvent.on("get-my-events") { (data, ack) in
-            
-            Helpers.errorHandler(with: data, completionHandler: { (json, error) in
-                if let error = error {
-                    return completionHandler(nil, error)
-                }
+        if isListening {
+            socketEvent.emit("get-my-events", with: [token])
+            socketEvent.off("get-my-events")
+            socketEvent.on("get-my-events") { (data, ack) in
                 
-                guard let json = json, json.count > 0 else {
-                    return completionHandler(nil, "Data is empty")
-                }
+                Helpers.errorHandler(with: data, completionHandler: { (json, error) in
+                    if let error = error {
+                        return completionHandler(nil, error)
+                    }
+                    
+                    guard let json = json, json.count > 0 else {
+                        return completionHandler(nil, "Data is empty")
+                    }
+                    
+                    //print(json)
+                    
+                    if json[0].isEmpty {
+                        return completionHandler([], nil)
+                    }
+                    
+                    //try parse from json to object
+                    guard let events = [EventObject].from(jsonArray: json) else {
+                        return completionHandler(nil, "Path not found")
+                    }
+                    
+                    return completionHandler(events, nil)
+                })
+            }
+        } else {
+            socketEvent.emit("get-my-events", with: [token])
+            socketEvent.once("get-my-events") { (data, ack) in
                 
-                //print(json)
-                
-                if json[0].isEmpty {
-                    return completionHandler([], nil)
-                }
-                
-                print(json)
-                
-                //try parse from json to object
-                guard let events = [EventObject].from(jsonArray: json) else {
-                    return completionHandler(nil, "Path not found")
-                }
-                
-                return completionHandler(events, nil)
-            })
+                Helpers.errorHandler(with: data, completionHandler: { (json, error) in
+                    if let error = error {
+                        return completionHandler(nil, error)
+                    }
+                    
+                    guard let json = json, json.count > 0 else {
+                        return completionHandler(nil, "Data is empty")
+                    }
+                    
+                    //print(json)
+                    
+                    if json[0].isEmpty {
+                        return completionHandler([], nil)
+                    }
+                    
+                    //try parse from json to object
+                    guard let events = [EventObject].from(jsonArray: json) else {
+                        return completionHandler(nil, "Path not found")
+                    }
+                    
+                    return completionHandler(events, nil)
+                })
+            }
         }
+        
+        
     }
     
     func getMoreEvents(_ from: Int, completionHandler: @escaping(_ events: [EventObject]?, _ error: String?) -> Void ) {

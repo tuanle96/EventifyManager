@@ -18,6 +18,7 @@ class MyEventCell: UITableViewCell {
     @IBOutlet weak var checkInView: UIView!
     
     var event: EventObject?
+    var delegate: MyEventDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,5 +57,11 @@ class MyEventCell: UITableViewCell {
         
         
     }
+    @IBAction func btnViewSummaryClicked(_ sender: Any) {
+        delegate?.viewSummary()
+    }
     
+    @IBAction func btnViewCheckInClicked(_ sender: Any) {
+        delegate?.checkIn()
+    }
 }

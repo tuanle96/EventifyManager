@@ -92,6 +92,9 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-0V-AHS">
                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                                <connections>
+                                                    <action selector="btnViewSummaryClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i5L-3c-g0P"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,6 +136,9 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PF-Dq-oZ4">
                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                                <connections>
+                                                    <action selector="btnViewCheckInClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xG4-k0-298"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.3704946637" green="0.74380010370000005" blue="0.61156356329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
