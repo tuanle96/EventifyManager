@@ -14,6 +14,7 @@ class CheckInVC: UIViewController {
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
+    var infoView = InforDialogVC()
     
     let supportedCodeTypes = [AVMetadataObjectTypeUPCECode,
                               AVMetadataObjectTypeCode39Code,
@@ -28,61 +29,130 @@ class CheckInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //required input permission
-        let captureDevice = AVCaptureDevice.defaultDevice(withDeviceType: AVCaptureDeviceType.builtInDualCamera, mediaType: AVMediaTypeVideo, position: AVCaptureDevicePosition.back)
         
         switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
-        case .denied, .notDetermined, .restricted:
-            print("CAMERA NOT FOUND")
+        case .authorized:
+            self.initCamera()
+        case .denied:
+            self.showAlert("Please go to setting to turn on camera permission", title: "Whoops", buttons: nil)
+        case .notDetermined:
+            self.requestCameraPermission()
+        case .restricted:
+            self.showAlert("Please go to setting to turn on camera permission", title: "Whoops", buttons: nil)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.captureSession?.stopRunning()
+    }
+    
+    func initCamera() {
+        // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
+        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        
+        do {
+            // Get an instance of the AVCaptureDeviceInput class using the previous device object.
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            
+            // Initialize the captureSession object.
+            captureSession = AVCaptureSession()
+            
+            // Set the input device on the capture session.
+            captureSession?.addInput(input)
+            
+            // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
+            let captureMetadataOutput = AVCaptureMetadataOutput()
+            captureSession?.addOutput(captureMetadataOutput)
+            
+            // Set delegate and use the default dispatch queue to execute the call back
+            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            captureMetadataOutput.metadataObjectTypes = supportedCodeTypes
+            
+            // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+            videoPreviewLayer?.frame = view.layer.bounds
+            view.layer.addSublayer(videoPreviewLayer!)
+            
+            // Start video capture.
+            captureSession?.startRunning()
+            
+            // Initialize QR Code Frame to highlight the QR code
+            qrCodeFrameView = UIView()
+            
+            if let qrCodeFrameView = qrCodeFrameView {
+                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+                qrCodeFrameView.layer.borderWidth = 2
+                view.addSubview(qrCodeFrameView)
+                view.bringSubview(toFront: qrCodeFrameView)
+            }
+            
+        } catch {
+            // If any error occurs, simply print it out and don't continue any more.
+            print(error)
             return
-        default:
-            do {
-                //input
-                let input = try AVCaptureDeviceInput(device: captureDevice)
-                self.captureSession = AVCaptureSession()
-                self.captureSession?.addInput(input)
-                
-                //output
-                let output = AVCaptureMetadataOutput()
-                output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-                output.metadataObjectTypes = self.supportedCodeTypes
-                
-                self.captureSession?.addOutput(output)
-                
-                //init preview player
-                self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-                self.videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-                self.videoPreviewLayer?.frame = self.view.layer.bounds
-                self.view.layer.addSublayer(self.videoPreviewLayer!)
-                
-                //init highlight qrcode
-                self.qrCodeFrameView = UIView()
-                self.qrCodeFrameView?.layer.borderColor = UIColor.blue.cgColor
-                self.qrCodeFrameView?.layer.borderWidth = 1
-                self.view.addSubview(self.qrCodeFrameView!)
-                self.view.bringSubview(toFront: self.qrCodeFrameView!)
-                
-                //start session
-                self.captureSession?.startRunning()
-                
-                
-            } catch let e {
-                print(e.localizedDescription)
+        }
+    }
+    
+    func requestCameraPermission() {
+        //request permission
+        AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { (isAuth) in
+            if isAuth {
+                self.initCamera()
+            } else {
+                self.showAlert("Please go to setting to turn on camera permission", title: "Whoops", buttons: nil)
             }
         }
+    }
+}
+
+extension CheckInVC: AVCaptureMetadataOutputObjectsDelegate {
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
-        //init session
+        if !self.childViewControllers.isEmpty {
+            return
+        }
         
-        //start capture
+        // Check if the metadataObjects array is not nil and it contains at least one object.
+        if metadataObjects == nil || metadataObjects.count == 0 {
+            qrCodeFrameView?.frame = CGRect.zero
+            print("No QR/barcode is detected")
+            return
+        }
+        
+        guard let metadataObj = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else {
+            return
+        }
+        
+        if supportedCodeTypes.contains(metadataObj.type) {
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
+            qrCodeFrameView?.frame = barCodeObject!.bounds
+            checkIn(with: metadataObj.stringValue)
+        }
         
     }
     
-    
-}
-
-extension CheckInVC: AVCaptureMetadataOutputObjectsDelegate { 
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
-        
+    func checkIn(with qrCode: String) {
+        OrderServices.shared.checkOrder(with: qrCode) { (info, error) in
+            if let error = error {
+                self.showAlert(error, title: "Whoops", buttons: nil)
+                return
+            }
+            
+            guard let info = info else {
+                self.showAlert("No informations", title: "Whoops", buttons: nil)
+                return
+            }
+            
+            print(info)
+            
+            self.infoView.info = info
+            self.view.bringSubview(toFront: self.infoView.view)
+            self.addChildViewController(self.infoView)
+            self.infoView.view.frame = self.view.frame
+            self.view.addSubview(self.infoView.view)
+            self.infoView.didMove(toParentViewController: self)
+            
+        }
     }
 }

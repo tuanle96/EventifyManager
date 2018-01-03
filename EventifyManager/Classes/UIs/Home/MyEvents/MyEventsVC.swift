@@ -33,6 +33,16 @@ class MyEventsVC: UIViewController {
         loadMyEvents()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func setUpUI() {
         //pull to refresh
         refreshControl = UIRefreshControl()
@@ -53,6 +63,7 @@ class MyEventsVC: UIViewController {
         //btnEvents
         btnUpcomingEvent.layer.cornerRadius = 20
         btnPreviousEvent.layer.cornerRadius = 20
+        
         
     }
     
@@ -123,16 +134,35 @@ extension MyEventsVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as? UITabBarController else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(tabBar, animated: true)
+    }
 }
 
 extension MyEventsVC: MyEventDelegate {
     //open summary view controller
     func viewSummary() -> Void {
-        print("view summary")
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? UITabBarController else{
+            return
+        }
+        
+        vc.selectedIndex = 0
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //open check in view controller
     func checkIn() -> Void {
-        print("check in")
+        
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? UITabBarController else{
+            return
+        }
+        
+        vc.selectedIndex = 1
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

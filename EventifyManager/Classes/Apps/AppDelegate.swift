@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func showMainView() {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyEventsVC") as? MyEventsVC {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "navi") as? UINavigationController {
             self.window?.rootViewController = vc
         }
     }

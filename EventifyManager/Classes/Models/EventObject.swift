@@ -22,7 +22,7 @@ class EventObject: NSObject, Glossy {
     var timeEnd: Int?
     var types: [TypeObject]?
     var tickets: [TicketObject]?
-    //var liked: [LikeEventObjectTest]?
+    var ordered: [UserObject]?
     
     override init() {
         self.id = ""

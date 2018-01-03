@@ -12,7 +12,7 @@ import UIKit
 extension UIViewController {
     
     func showAlert(_ message:String, title: String, buttons: [UIAlertAction]?) {
-        let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         if let buttons = buttons {
             for button in buttons {
@@ -35,4 +35,8 @@ extension UIViewController {
         view.endEditing(true)
     }
     
+    
+    func isAlertShowing() -> Bool {
+        return self.presentedViewController == nil ? false : true
+    }
 }

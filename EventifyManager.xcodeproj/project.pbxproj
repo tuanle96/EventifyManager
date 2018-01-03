@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1765D41A1FFCADC600314410 /* InforDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765D4181FFCADC600314410 /* InforDialogVC.swift */; };
+		1765D41B1FFCADC600314410 /* InforDialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1765D4191FFCADC600314410 /* InforDialogVC.xib */; };
 		17E1CCE11FF780FF002A783E /* MyEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE01FF780FF002A783E /* MyEventDelegate.swift */; };
 		17E1CCE61FF78C8F002A783E /* CheckInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE51FF78C8F002A783E /* CheckInVC.swift */; };
 		17E1CCE81FF78CA6002A783E /* OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE71FF78CA6002A783E /* OrderListVC.swift */; };
@@ -71,6 +73,8 @@
 
 /* Begin PBXFileReference section */
 		172BBB931FF5F785003D6D7A /* EventifyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventifyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1765D4181FFCADC600314410 /* InforDialogVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforDialogVC.swift; sourceTree = "<group>"; };
+		1765D4191FFCADC600314410 /* InforDialogVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforDialogVC.xib; sourceTree = "<group>"; };
 		17C8EC55ABDD2AC0012EF429 /* Pods-EventifyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventifyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager.debug.xcconfig"; sourceTree = "<group>"; };
 		17E1CCE01FF780FF002A783E /* MyEventDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventDelegate.swift; sourceTree = "<group>"; };
 		17E1CCE51FF78C8F002A783E /* CheckInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInVC.swift; sourceTree = "<group>"; };
@@ -176,6 +180,15 @@
 			path = EventifyManager;
 			sourceTree = "<group>";
 		};
+		1765D4171FFCADB600314410 /* InfoDialog */ = {
+			isa = PBXGroup;
+			children = (
+				1765D4181FFCADC600314410 /* InforDialogVC.swift */,
+				1765D4191FFCADC600314410 /* InforDialogVC.xib */,
+			);
+			path = InfoDialog;
+			sourceTree = "<group>";
+		};
 		17E1CCE21FF78C79002A783E /* Summary */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,7 @@
 		17E1CCE31FF78C79002A783E /* CheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				1765D4171FFCADB600314410 /* InfoDialog */,
 				17E1CCE51FF78C8F002A783E /* CheckInVC.swift */,
 			);
 			path = CheckIn;
@@ -516,6 +530,7 @@
 				17F031991FF61A73005BAD72 /* Ubuntu-Medium.ttf in Resources */,
 				17F031781FF6164D005BAD72 /* Launch Screen.storyboard in Resources */,
 				17F0318A1FF618C7005BAD72 /* SignUpVC.xib in Resources */,
+				1765D41B1FFCADC600314410 /* InforDialogVC.xib in Resources */,
 				17F0319E1FF61A73005BAD72 /* Ubuntu-BoldItalic.ttf in Resources */,
 				17F0317A1FF61676005BAD72 /* Launch.storyboard in Resources */,
 				17F031811FF617EF005BAD72 /* Main.storyboard in Resources */,
@@ -613,6 +628,7 @@
 				17F0312C1FF61631005BAD72 /* Extensions+NSError.swift in Sources */,
 				17F0316A1FF61631005BAD72 /* TypeEventServices.swift in Sources */,
 				17F031691FF61631005BAD72 /* OrderServices.swift in Sources */,
+				1765D41A1FFCADC600314410 /* InforDialogVC.swift in Sources */,
 				17F0311B1FF61631005BAD72 /* UserManager.swift in Sources */,
 				17E1CCE61FF78C8F002A783E /* CheckInVC.swift in Sources */,
 				17F031591FF61631005BAD72 /* ForgotPasswordVC.swift in Sources */,

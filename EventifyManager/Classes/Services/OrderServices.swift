@@ -173,4 +173,36 @@ class OrderServices: NSObject {
             })
         }
     }
+    
+    func checkOrder(with qrCode: String, _ completionHandler: @escaping (_ info: [String: Any]?, _ error: String?) -> Void) -> Void {
+        guard let token = UserManager.shared.currentUser?.token else {
+            return completionHandler(nil, "Missing token")
+        }
+        
+        socket.emit("check-order", with: [qrCode, token]);
+        
+        socket.once("check-order") { (data, ack) in
+            Helpers.errorHandler(with: data, completionHandler: { (json, error) in
+                if let error = error {
+                    return completionHandler(nil, error)
+                }
+                
+                guard let json = json, json.count > 0 else {
+                    return completionHandler(nil, "Data is empty")
+                }
+                
+                /*
+                 let response = {
+                 'STATUS': 'VALID',
+                 'NAME': fullName,
+                 'PHONE': phoneNumber,
+                 'CODE NUMBER': code[1],
+                 'TICKET TYPE': ticketType
+                 }
+                 */
+                
+                return completionHandler(json[0], nil)
+            })
+        }
+    }
 }
