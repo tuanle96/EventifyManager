@@ -63,8 +63,6 @@ class MyEventsVC: UIViewController {
         //btnEvents
         btnUpcomingEvent.layer.cornerRadius = 20
         btnPreviousEvent.layer.cornerRadius = 20
-        
-        
     }
     
     func refresh() {
@@ -136,9 +134,10 @@ extension MyEventsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as? UITabBarController else {
+        guard let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "MyEventTabBarVC") as? MyEventTabBarVC else {
             return
         }
+        tabBar.myEvent = self.myEvents[indexPath.row]
         
         self.navigationController?.pushViewController(tabBar, animated: true)
     }
@@ -146,22 +145,24 @@ extension MyEventsVC: UITableViewDelegate, UITableViewDataSource {
 
 extension MyEventsVC: MyEventDelegate {
     //open summary view controller
-    func viewSummary() -> Void {
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? UITabBarController else{
+    func viewSummary(with event: EventObject) -> Void {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyEventTabBarVC") as? MyEventTabBarVC else{
             return
         }
         
+        vc.myEvent = event
         vc.selectedIndex = 0
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //open check in view controller
-    func checkIn() -> Void {
+    func checkIn(with event: EventObject) -> Void {
         
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? UITabBarController else{
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyEventTabBarVC") as? MyEventTabBarVC else{
             return
         }
         
+        vc.myEvent = event
         vc.selectedIndex = 1
         self.navigationController?.pushViewController(vc, animated: true)
     }

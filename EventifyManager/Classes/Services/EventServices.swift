@@ -319,6 +319,7 @@ class EventServices: NSObject {
         }
         
         let imgPath = "\(user.id)\(Helpers.getTimeStampWithInt()).jpg"
+        
         socketEvent.emit("upload-image-description-event", with: [imgData, imgPath, token])
         
         socketEvent.once("upload-image-description-event") { (data, ack) in
@@ -337,6 +338,35 @@ class EventServices: NSObject {
                 }
                 
                 return completionHandler(path, downloadURL, nil)
+            })
+        }
+    }
+    
+    func getUserOrdered(with idEvent: String, _ completionHandler: @escaping (_ users: [UserObject]?, _ error: String?) -> Void) -> Void {
+        guard let token = UserManager.shared.currentUser?.token else {
+            return completionHandler(nil, "Current user not found")
+        }
+        
+        socketEvent.off("get-users-ordered")
+        
+        socketEvent.emit("get-users-ordered", with: [idEvent, token])
+        
+        socketEvent.on("get-users-ordered") { (data, ack) in
+            Helpers.errorHandler(with: data, completionHandler: { (json, error) in
+                if let error = error {
+                    return completionHandler(nil, error)
+                }
+                
+                guard let json = json, json.count > 0 else {
+                    return completionHandler(nil, "Data is empty")
+                }
+                
+                //try parse from json to object
+                guard let users = [UserObject].from(jsonArray: json) else {
+                    return completionHandler(nil, "Parse data to object has been failed")
+                }
+                
+                return completionHandler(users, nil)
             })
         }
     }

@@ -9,6 +9,6 @@
 import Foundation
 
 protocol MyEventDelegate {
-    func viewSummary() -> Void
-    func checkIn() -> Void
+    func viewSummary(with event: EventObject) -> Void
+    func checkIn(with event: EventObject) -> Void
 }

@@ -58,10 +58,20 @@ class MyEventCell: UITableViewCell {
         
     }
     @IBAction func btnViewSummaryClicked(_ sender: Any) {
-        delegate?.viewSummary()
+        
+        guard let event = self.event else {
+            return
+        }
+        
+        delegate?.viewSummary(with: event)
     }
     
     @IBAction func btnViewCheckInClicked(_ sender: Any) {
-        delegate?.checkIn()
+        
+        guard let event = self.event else {
+            return
+        }
+        
+        delegate?.checkIn(with: event)
     }
 }
