@@ -174,12 +174,12 @@ class OrderServices: NSObject {
         }
     }
     
-    func checkOrder(with qrCode: String, _ completionHandler: @escaping (_ info: [String: Any]?, _ error: String?) -> Void) -> Void {
+    func checkOrder(with qrCode: String, and idEvent: String, _ completionHandler: @escaping (_ info: [String: Any]?, _ error: String?) -> Void) -> Void {
         guard let token = UserManager.shared.currentUser?.token else {
             return completionHandler(nil, "Missing token")
         }
         
-        socket.emit("check-order", with: [qrCode, token]);
+        socket.emit("check-order", with: [qrCode, idEvent, token]);
         
         socket.once("check-order") { (data, ack) in
             Helpers.errorHandler(with: data, completionHandler: { (json, error) in

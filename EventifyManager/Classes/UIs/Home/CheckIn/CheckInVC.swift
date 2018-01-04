@@ -11,10 +11,13 @@ import AVFoundation
 
 class CheckInVC: UIViewController {
     
-    var captureSession:AVCaptureSession?
-    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-    var qrCodeFrameView:UIView?
+    var captureSession: AVCaptureSession?
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var qrCodeFrameView: UIView?
     var infoView = InforDialogVC()
+    var isChecking = false
+    var loading = UIActivityIndicatorView()
+    var previousQRCode: String = ""
     
     let supportedCodeTypes = [AVMetadataObjectTypeUPCECode,
                               AVMetadataObjectTypeCode39Code,
@@ -109,14 +112,16 @@ class CheckInVC: UIViewController {
 extension CheckInVC: AVCaptureMetadataOutputObjectsDelegate {
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
-        if !self.childViewControllers.isEmpty {
+        if isChecking || self.childViewControllers.count != 0 { return }
+        
+        //check id event
+        guard let idEvent = (self.tabBarController as? MyEventTabBarVC)?.myEvent?.id else {
             return
         }
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            print("No QR/barcode is detected")
             return
         }
         
@@ -127,13 +132,24 @@ extension CheckInVC: AVCaptureMetadataOutputObjectsDelegate {
         if supportedCodeTypes.contains(metadataObj.type) {
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
-            checkIn(with: metadataObj.stringValue)
+            checkIn(with: metadataObj.stringValue, and: idEvent)
         }
-        
     }
     
-    func checkIn(with qrCode: String) {
-        OrderServices.shared.checkOrder(with: qrCode) { (info, error) in
+    func checkIn(with qrCode: String, and idEvent: String) {
+        
+        if self.previousQRCode == qrCode { return }
+        
+        self.isChecking = true
+        self.loading.showLoadingDialog(self)
+        self.previousQRCode = qrCode
+        OrderServices.shared.checkOrder(with: qrCode, and: idEvent) { (info, error) in
+            
+            self.isChecking = false
+            self.loading.stopAnimating()
+            
+            self.qrCodeFrameView?.frame = CGRect.zero
+            
             if let error = error {
                 self.showAlert(error, title: "Whoops", buttons: nil)
                 return
@@ -143,8 +159,6 @@ extension CheckInVC: AVCaptureMetadataOutputObjectsDelegate {
                 self.showAlert("No informations", title: "Whoops", buttons: nil)
                 return
             }
-            
-            print(info)
             
             self.infoView.info = info
             self.view.bringSubview(toFront: self.infoView.view)

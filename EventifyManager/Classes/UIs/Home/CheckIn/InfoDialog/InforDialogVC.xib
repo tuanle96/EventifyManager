@@ -23,6 +23,7 @@
                 <outlet property="lblCodeNumber" destination="v7W-VT-GFN" id="EX0-mn-QRd"/>
                 <outlet property="lblFullName" destination="jwP-p4-qFW" id="8Yh-D7-eKo"/>
                 <outlet property="lblPhone" destination="9fW-AO-gCc" id="PHk-uP-LpZ"/>
+                <outlet property="lblStatus" destination="uQs-or-06l" id="4R2-dA-oIy"/>
                 <outlet property="lblTicketType" destination="YpG-RQ-jyp" id="Okr-uL-K06"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -83,7 +84,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kK-ex-orZ">
-                            <rect key="frame" x="10" y="60" width="40.5" height="15"/>
+                            <rect key="frame" x="10" y="60" width="41" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="15" id="neN-zX-a3d"/>
                             </constraints>

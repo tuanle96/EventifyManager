@@ -10,6 +10,7 @@ import UIKit
 
 class InforDialogVC: UIViewController {
     
+    @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var lblFullName: UILabel!
     @IBOutlet weak var lblPhone: UILabel!
@@ -25,6 +26,7 @@ class InforDialogVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        self.lblStatus.text = ((self.info?["STATUS"] as? Bool) ?? false) == true ? "Hợp lệ" : "Không hợp lệ"
         self.lblFullName.text = (self.info?["NAME"] as? String) ?? "Không rõ"
         self.lblPhone.text = (self.info?["PHONE"] as? Int)?.toString() ?? "Không rõ"
         self.lblCodeNumber.text = (self.info?["CODE_NUMBER"] as? String) ?? "Không rõ"
