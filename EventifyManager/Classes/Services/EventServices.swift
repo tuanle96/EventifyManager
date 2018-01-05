@@ -342,16 +342,16 @@ class EventServices: NSObject {
         }
     }
     
-    func getUserOrdered(with idEvent: String, _ completionHandler: @escaping (_ users: [UserObject]?, _ error: String?) -> Void) -> Void {
+    func getOrders(with idEvent: String, _ completionHandler: @escaping (_ users: [OrderObject]?, _ error: String?) -> Void) -> Void {
         guard let token = UserManager.shared.currentUser?.token else {
             return completionHandler(nil, "Current user not found")
         }
         
-        socketEvent.off("get-users-ordered")
+        socketEvent.off("get-orders-by-event")
         
-        socketEvent.emit("get-users-ordered", with: [idEvent, token])
+        socketEvent.emit("get-orders-by-event", with: [idEvent, token])
         
-        socketEvent.on("get-users-ordered") { (data, ack) in
+        socketEvent.on("get-orders-by-event") { (data, ack) in
             Helpers.errorHandler(with: data, completionHandler: { (json, error) in
                 if let error = error {
                     return completionHandler(nil, error)
@@ -362,11 +362,11 @@ class EventServices: NSObject {
                 }
                 
                 //try parse from json to object
-                guard let users = [UserObject].from(jsonArray: json) else {
+                guard let orders = [OrderObject].from(jsonArray: json) else {
                     return completionHandler(nil, "Parse data to object has been failed")
                 }
                 
-                return completionHandler(users, nil)
+                return completionHandler(orders, nil)
             })
         }
     }

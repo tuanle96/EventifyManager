@@ -139,6 +139,8 @@ extension MyEventsVC: UITableViewDelegate, UITableViewDataSource {
         }
         tabBar.myEvent = self.myEvents[indexPath.row]
         
+        tabBar.selectedIndex = 2
+        
         self.navigationController?.pushViewController(tabBar, animated: true)
     }
 }
@@ -167,3 +169,4 @@ extension MyEventsVC: MyEventDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
+

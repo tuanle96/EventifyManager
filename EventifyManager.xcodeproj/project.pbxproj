@@ -12,6 +12,9 @@
 		1765D41F1FFCD41D00314410 /* ListUserOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765D41D1FFCD41D00314410 /* ListUserOrderCell.swift */; };
 		1765D4201FFCD41D00314410 /* ListUserOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1765D41E1FFCD41D00314410 /* ListUserOrderCell.xib */; };
 		1765D4221FFCDBF800314410 /* MyEventTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765D4211FFCDBF800314410 /* MyEventTabBarVC.swift */; };
+		176933FB1FFF413100F90E57 /* TicketsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176933F91FFF413100F90E57 /* TicketsCell.swift */; };
+		176933FC1FFF413100F90E57 /* TicketsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176933FA1FFF413100F90E57 /* TicketsCell.xib */; };
+		176934001FFF45CA00F90E57 /* ListTicketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176933FF1FFF45CA00F90E57 /* ListTicketsVC.swift */; };
 		17E1CCE11FF780FF002A783E /* MyEventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE01FF780FF002A783E /* MyEventDelegate.swift */; };
 		17E1CCE61FF78C8F002A783E /* CheckInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE51FF78C8F002A783E /* CheckInVC.swift */; };
 		17E1CCE81FF78CA6002A783E /* OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1CCE71FF78CA6002A783E /* OrderListVC.swift */; };
@@ -81,6 +84,9 @@
 		1765D41D1FFCD41D00314410 /* ListUserOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUserOrderCell.swift; sourceTree = "<group>"; };
 		1765D41E1FFCD41D00314410 /* ListUserOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListUserOrderCell.xib; sourceTree = "<group>"; };
 		1765D4211FFCDBF800314410 /* MyEventTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventTabBarVC.swift; sourceTree = "<group>"; };
+		176933F91FFF413100F90E57 /* TicketsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsCell.swift; sourceTree = "<group>"; };
+		176933FA1FFF413100F90E57 /* TicketsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketsCell.xib; sourceTree = "<group>"; };
+		176933FF1FFF45CA00F90E57 /* ListTicketsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTicketsVC.swift; sourceTree = "<group>"; };
 		17C8EC55ABDD2AC0012EF429 /* Pods-EventifyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventifyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EventifyManager/Pods-EventifyManager.debug.xcconfig"; sourceTree = "<group>"; };
 		17E1CCE01FF780FF002A783E /* MyEventDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventDelegate.swift; sourceTree = "<group>"; };
 		17E1CCE51FF78C8F002A783E /* CheckInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInVC.swift; sourceTree = "<group>"; };
@@ -198,10 +204,21 @@
 		1765D41C1FFCD40700314410 /* ListUserOrderCell */ = {
 			isa = PBXGroup;
 			children = (
+				176933F81FFF411800F90E57 /* TicketsCell */,
 				1765D41D1FFCD41D00314410 /* ListUserOrderCell.swift */,
 				1765D41E1FFCD41D00314410 /* ListUserOrderCell.xib */,
+				176933FF1FFF45CA00F90E57 /* ListTicketsVC.swift */,
 			);
 			path = ListUserOrderCell;
+			sourceTree = "<group>";
+		};
+		176933F81FFF411800F90E57 /* TicketsCell */ = {
+			isa = PBXGroup;
+			children = (
+				176933F91FFF413100F90E57 /* TicketsCell.swift */,
+				176933FA1FFF413100F90E57 /* TicketsCell.xib */,
+			);
+			path = TicketsCell;
 			sourceTree = "<group>";
 		};
 		17E1CCE21FF78C79002A783E /* Summary */ = {
@@ -537,6 +554,7 @@
 				17F0319B1FF61A73005BAD72 /* Ubuntu-Regular.ttf in Resources */,
 				17F031861FF6185C005BAD72 /* MyEventCell.xib in Resources */,
 				17F031B41FF6251B005BAD72 /* SignInVC.xib in Resources */,
+				176933FC1FFF413100F90E57 /* TicketsCell.xib in Resources */,
 				1765D4201FFCD41D00314410 /* ListUserOrderCell.xib in Resources */,
 				17F031A01FF61A73005BAD72 /* Ubuntu-Light.ttf in Resources */,
 				17F0319F1FF61A73005BAD72 /* Ubuntu-Italic.ttf in Resources */,
@@ -644,6 +662,7 @@
 				17F0312D1FF61631005BAD72 /* Extensions+Data.swift in Sources */,
 				17F0312F1FF61631005BAD72 /* Extensions+HTTPURLResponse.swift in Sources */,
 				17F0312C1FF61631005BAD72 /* Extensions+NSError.swift in Sources */,
+				176934001FFF45CA00F90E57 /* ListTicketsVC.swift in Sources */,
 				17F0316A1FF61631005BAD72 /* TypeEventServices.swift in Sources */,
 				17F031691FF61631005BAD72 /* OrderServices.swift in Sources */,
 				1765D41A1FFCADC600314410 /* InforDialogVC.swift in Sources */,
@@ -672,6 +691,7 @@
 				1765D4221FFCDBF800314410 /* MyEventTabBarVC.swift in Sources */,
 				17F0312B1FF61631005BAD72 /* Extensions+Date.swift in Sources */,
 				17F0311F1FF61631005BAD72 /* UserObject.swift in Sources */,
+				176933FB1FFF413100F90E57 /* TicketsCell.swift in Sources */,
 				17F031641FF61631005BAD72 /* Helpers.swift in Sources */,
 				17F0312A1FF61631005BAD72 /* Extensions+Int.swift in Sources */,
 			);

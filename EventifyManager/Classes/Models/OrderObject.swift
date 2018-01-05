@@ -42,7 +42,7 @@ class OrderObject: NSObject, Glossy {
         }
         
         //orders
-        if let orderBy: UserObject = "orderby" <~~ json {
+        if let orderBy: UserObject = "orderBy" <~~ json {
             self.orderBy = orderBy
         }
         

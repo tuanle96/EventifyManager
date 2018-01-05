@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Light.ttf">
+            <string>Ubuntu-Light</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TicketsCell" selectionStyle="default" indentationWidth="10" rowHeight="124" id="KGk-i7-Jjw" customClass="TicketsCell" customModule="EventifyManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="536" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="536" height="123.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket-3" translatesAutoresizingMaskIntoConstraints="NO" id="ZxV-7W-wog">
+                        <rect key="frame" x="15" y="39.5" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="671-ly-vsX"/>
+                            <constraint firstAttribute="width" constant="45" id="BI7-i6-3SC"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVl-HZ-ueU">
+                        <rect key="frame" x="75" y="5" width="446" height="113.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã vé" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js7-iu-uZu">
+                                <rect key="frame" x="5" y="5" width="40" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loại vé: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fc-3y-X7C">
+                                <rect key="frame" x="5" y="32" width="55" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trạng thái:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfV-e2-Agn">
+                                <rect key="frame" x="5" y="59" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời gian check-in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITb-dJ-3Tk">
+                                <rect key="frame" x="5" y="86" width="119" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$512353g3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkP-tr-wui">
+                                <rect key="frame" x="65" y="5" width="77" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhV-fX-V3C">
+                                <rect key="frame" x="70" y="32" width="37" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI0-Zd-LEa">
+                                <rect key="frame" x="87" y="59" width="37" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2i-op-OFq">
+                                <rect key="frame" x="134" y="86" width="37" height="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MhV-fX-V3C" firstAttribute="centerY" secondItem="3Fc-3y-X7C" secondAttribute="centerY" id="51p-n5-gvy"/>
+                            <constraint firstItem="Js7-iu-uZu" firstAttribute="top" secondItem="NVl-HZ-ueU" secondAttribute="top" constant="5" id="76R-YH-Pat"/>
+                            <constraint firstItem="bI0-Zd-LEa" firstAttribute="centerY" secondItem="CfV-e2-Agn" secondAttribute="centerY" id="7Ba-Ff-3TB"/>
+                            <constraint firstItem="bI0-Zd-LEa" firstAttribute="leading" secondItem="CfV-e2-Agn" secondAttribute="trailing" constant="10" id="AOX-PW-qWk"/>
+                            <constraint firstItem="nkP-tr-wui" firstAttribute="centerY" secondItem="Js7-iu-uZu" secondAttribute="centerY" id="Bjl-dx-tOW"/>
+                            <constraint firstItem="M2i-op-OFq" firstAttribute="leading" secondItem="ITb-dJ-3Tk" secondAttribute="trailing" constant="10" id="CNM-W9-tDD"/>
+                            <constraint firstItem="CfV-e2-Agn" firstAttribute="leading" secondItem="3Fc-3y-X7C" secondAttribute="leading" id="JrV-Iv-HN8"/>
+                            <constraint firstItem="3Fc-3y-X7C" firstAttribute="leading" secondItem="Js7-iu-uZu" secondAttribute="leading" id="NCy-rv-dhQ"/>
+                            <constraint firstItem="ITb-dJ-3Tk" firstAttribute="leading" secondItem="CfV-e2-Agn" secondAttribute="leading" id="VDd-sE-yd4"/>
+                            <constraint firstItem="MhV-fX-V3C" firstAttribute="leading" secondItem="3Fc-3y-X7C" secondAttribute="trailing" constant="10" id="Y1N-XM-jd5"/>
+                            <constraint firstItem="3Fc-3y-X7C" firstAttribute="top" secondItem="Js7-iu-uZu" secondAttribute="bottom" constant="10" id="Y9a-X3-Zkx"/>
+                            <constraint firstItem="M2i-op-OFq" firstAttribute="centerY" secondItem="ITb-dJ-3Tk" secondAttribute="centerY" id="dxS-9i-Dfx"/>
+                            <constraint firstAttribute="bottom" secondItem="ITb-dJ-3Tk" secondAttribute="bottom" constant="10.5" id="f0x-nR-9FZ"/>
+                            <constraint firstItem="nkP-tr-wui" firstAttribute="leading" secondItem="Js7-iu-uZu" secondAttribute="trailing" constant="20" id="fGD-Vr-QLR"/>
+                            <constraint firstItem="ITb-dJ-3Tk" firstAttribute="top" secondItem="bI0-Zd-LEa" secondAttribute="bottom" constant="10" id="ify-fJ-e1b"/>
+                            <constraint firstItem="Js7-iu-uZu" firstAttribute="leading" secondItem="NVl-HZ-ueU" secondAttribute="leading" constant="5" id="mWb-hK-SoK"/>
+                            <constraint firstItem="CfV-e2-Agn" firstAttribute="top" secondItem="MhV-fX-V3C" secondAttribute="bottom" constant="10" id="q5M-DN-GIz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="NVl-HZ-ueU" secondAttribute="bottom" constant="5" id="6Zw-ep-C8z"/>
+                    <constraint firstItem="ZxV-7W-wog" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="StT-p3-Pbx"/>
+                    <constraint firstItem="NVl-HZ-ueU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Yn1-2M-NVP"/>
+                    <constraint firstItem="NVl-HZ-ueU" firstAttribute="leading" secondItem="ZxV-7W-wog" secondAttribute="trailing" constant="15" id="mrS-qM-Vnf"/>
+                    <constraint firstItem="ZxV-7W-wog" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qUK-X1-DYC"/>
+                    <constraint firstAttribute="trailing" secondItem="NVl-HZ-ueU" secondAttribute="trailing" constant="15" id="yQt-OH-b7l"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblIdTicket" destination="nkP-tr-wui" id="zx1-nG-c8E"/>
+                <outlet property="lblStatus" destination="bI0-Zd-LEa" id="iUd-gE-yfy"/>
+                <outlet property="lblTicketType" destination="MhV-fX-V3C" id="aoU-Pr-se9"/>
+                <outlet property="lblTimeCheckIn" destination="M2i-op-OFq" id="U9j-eQ-OZQ"/>
+            </connections>
+            <point key="canvasLocation" x="11" y="61"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ticket-3" width="45" height="45"/>
+    </resources>
+</document>

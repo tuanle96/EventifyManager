@@ -11,8 +11,11 @@ import Gloss
 
 class TicketOrderObject: NSObject, Glossy {
     var id: String
+    var informations: TicketObject?
     var QRCode: String?
     var QRCodeImgPath: String?
+    var isCheckedIn: Bool?
+    var timeCheckIn: String?
     
     override init() {
         self.id = ""
@@ -29,6 +32,18 @@ class TicketOrderObject: NSObject, Glossy {
         
         self.QRCodeImgPath = "QRCodePath" <~~ json
         self.QRCode = "QRCode" <~~ json
+        
+        if let informations: TicketObject = "informations" <~~ json {
+            self.informations = informations
+        }
+        
+        if let isCheckedIn: Bool = "isCheckedIn" <~~ json {
+            self.isCheckedIn = isCheckedIn
+        }
+        
+        if let timeCheckIn: String = "timeCheckIn" <~~ json {
+            self.timeCheckIn = timeCheckIn
+        }
     }
     
     //to json

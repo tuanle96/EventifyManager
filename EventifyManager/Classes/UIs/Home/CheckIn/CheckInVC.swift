@@ -18,6 +18,7 @@ class CheckInVC: UIViewController {
     var isChecking = false
     var loading = UIActivityIndicatorView()
     var previousQRCode: String = ""
+    var ticketsChecked = [String]()
     
     let supportedCodeTypes = [AVMetadataObjectTypeUPCECode,
                               AVMetadataObjectTypeCode39Code,
@@ -43,6 +44,10 @@ class CheckInVC: UIViewController {
         case .restricted:
             self.showAlert("Please go to setting to turn on camera permission", title: "Whoops", buttons: nil)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.captureSession?.startRunning()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -112,7 +117,7 @@ class CheckInVC: UIViewController {
 extension CheckInVC: AVCaptureMetadataOutputObjectsDelegate {
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
-        if isChecking || self.childViewControllers.count != 0 { return }
+        if self.childViewControllers.count != 0 { return }
         
         //check id event
         guard let idEvent = (self.tabBarController as? MyEventTabBarVC)?.myEvent?.id else {
@@ -138,14 +143,14 @@ extension CheckInVC: AVCaptureMetadataOutputObjectsDelegate {
     
     func checkIn(with qrCode: String, and idEvent: String) {
         
-        if self.previousQRCode == qrCode { return }
+        if self.ticketsChecked.contains(qrCode) { return }
         
-        self.isChecking = true
         self.loading.showLoadingDialog(self)
-        self.previousQRCode = qrCode
+        
+        self.ticketsChecked.append(qrCode)
+        
         OrderServices.shared.checkOrder(with: qrCode, and: idEvent) { (info, error) in
             
-            self.isChecking = false
             self.loading.stopAnimating()
             
             self.qrCodeFrameView?.frame = CGRect.zero
