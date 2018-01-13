@@ -22,6 +22,7 @@ class MyEventCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        summaryView.isHidden = true
         setUpUi()        
     }
     
